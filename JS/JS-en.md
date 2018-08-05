@@ -251,7 +251,7 @@ As for the latter, it first executes `new Foo()` to create an instance, then fin
 function foo() {
   console.log(this.a);
 }
-var a = 2;
+var a = 1;
 foo();
 
 var obj = {
@@ -796,7 +796,7 @@ Function.prototype.myBind = function (context) {
   return function F() {
     // we can use `new F()` because it returns a function, so we need to determine
     if (this instanceof F) {
-      return new _this(args, ...arguments)
+      return new _this(...args, ...arguments)
     }
     return _this.apply(context, args.concat(...arguments))
   }
@@ -1203,7 +1203,7 @@ The effect of `Map` is to generate a new array, iterate over the original array,
 //  parseInt('3', 2) -> NaN
 ```
 
-The effect of `FlapMap` is almost the same with a `Map`, but the original array will be flatten for multidimensional arrays. You can think of `FlapMap` as a `map` and a `flatten`, which is currently not supported in browsers.
+The effect of `FlatMap` is almost the same with a `Map`, but the original array will be flatten for multidimensional arrays. You can think of `FlatMap` as a `map` and a `flatten`, which is currently not supported in browsers.
 
 ```js
 [1, [2], 3].flatMap((v) => v + 1)
@@ -1214,7 +1214,7 @@ You can achieve this when you want to completely reduce the dimensions of a mult
 
 ```js
 const flattenDeep = (arr) => Array.isArray(arr)
-  ? arr.reduce( (a, b) => [...flattenDeep(a), ...flattenDeep(b)] , [])
+  ? arr.reduce( (a, b) => [...a, ...flattenDeep(b)] , [])
   : [arr]
 
 flattenDeep([1, [[2], [3, [4]], 5]])
@@ -1366,7 +1366,7 @@ parseFloat((0.1 + 0.2).toFixed(10))
 
 | Metacharacter |                            Effect                            |
 | :-----------: | :----------------------------------------------------------: |
-|       .       |     matches any character except the new line character      |
+|       .       |     matches any character except line terminators: \n, \r, \u2028 or \u2029.    |
 |      []       | matches anything within the brackets. For example, [0-9] can match any number |
 |       ^       | ^9 means matching anything that starts with '9'; [`^`9] means not matching characters except '9' in between brackets |
 |    {1, 2}     |               matches 1 or 2 digit characters                |
@@ -1389,7 +1389,7 @@ parseFloat((0.1 + 0.2).toFixed(10))
 
 | shorthand |            Effect            |
 | :--: | :------------------------: |
-|  \w  | alphanumeric characters, underline character or Chinese characters |
+|  \w  | alphanumeric characters, underline character |
 |  \W  |         the opposite of the above         |
 |  \s  |      any blank character      |
 |  \S  |         the opposite of the above         |

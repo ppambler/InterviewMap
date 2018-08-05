@@ -6,6 +6,11 @@
 
 <h4 align="center">这是一份能让你更好准备下一次面试的图谱</h4>
 
+<p align="center">
+  <a href="https://gitter.im/interview-map/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="Gitter"></a>
+  <a href="https://t.me/joinchat/GULTjw9enq3J4NQ6Yh5Ntw"><img src="https://img.shields.io/badge/chat-Telegram-brightgreen.svg" alt="Telegram"></a>
+</p>
+
 ## 前言
 
 > 当你老了，回顾一生，就会发觉：什么时候出国读书，什么时候决定做第一份职业，何时选定对象而恋爱，什么时候结婚，其实都是命运的巨变。只是当时站在三岔路口，眼见风云千樯，你做出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。
@@ -22,9 +27,17 @@
 
 该仓库内容会持续更新，后期将会包含更多的内容，比如：系统设计、区块链、运维、后端等等，当然这些不是我的强项，我会邀请这方面有不错经验的朋友来书写内容。
 
-# 大纲
+## 大纲
 
 ![mind](./InterviewMapMind.png)
+
+## 求职
+
+目前作者正在寻找工作机会，如果你有杭州前端岗位的内推，欢迎和我联系 zx597813039@gmail.com
+
+## 面试咨询
+
+如果你对于如何书写简历或者如何在面试中更好的的回答有疑虑，我们也提供付费服务，有意可咨询微信（597813039）
 
 ## 贡献
 
@@ -47,7 +60,7 @@
 
 ## 交流分享
 
-如果你想与他人交流关于本图谱的内容，可以加入 [交流群](https://github.com/KieSun/InterviewMap/issues/19)，请务必使用英文交流，谢谢。
+如果你想与他人交流关于本图谱的内容，可以加入 [交流群](https://github.com/KieSun/InterviewMap/issues/19) 或者 [gitter 聊天室](https://gitter.im/interview-map/Lobby)，请务必使用英文交流，谢谢。
 
 ## 支持我们
 
